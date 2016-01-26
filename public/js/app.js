@@ -25,8 +25,6 @@ socket.on('message', function (message) {
     $(".messages").append('<li class="list-group-item"><p><strong>' + message.name + '</strong> said</p><p>' + timeStr + ' --- ' + message.text + '</p></li>');
 });
 
-
-
 var $form = jQuery('#message-form');
 
 $form.on('submit', function (Event) {
