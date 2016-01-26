@@ -22,9 +22,10 @@ socket.on('message', function (message) {
     var momentTimestamp = moment.utc(message.timeStamp);
     var timeStr = momentTimestamp.local().format('h:mm a');
     console.log('New message: ' + message.text);
-    $(".messages").append('<p><strong>' + message.name + '</strong> said</p>');
-    $(".messages").append('<p>' + timeStr + ' --- ' + message.text + '</p>');
+    $(".messages").append('<li class="list-group-item"><p><strong>' + message.name + '</strong> said</p><p>' + timeStr + ' --- ' + message.text + '</p></li>');
 });
+
+
 
 var $form = jQuery('#message-form');
 
